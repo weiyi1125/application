@@ -1,0 +1,21 @@
+
+spring:
+  profiles:
+    active: test
+
+---
+
+spring:
+  profiles: dev
+server:
+  port: 8020
+
+
+---
+
+spring:
+  profiles: pro
+
+server:
+  port: 8021
+
