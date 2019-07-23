@@ -1,0 +1,71 @@
+
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles:
+    active: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+  instance:
+    instance-id: provider8005
+    prefer-ip-address: true
+
+server:
+  port: 8005
+spring:
+  application:
+    name: service-hi
+
+
+info:
+ app:
+  name: amber-cloud-dept-8001
+ company:
+  name: www.amber.com
+ build:
+  artifactId: $project.artifactId$
+  version: $project.version$
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+---
+spring:
+  profiles:
+    active: test
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+  instance:
+    instance-id: provider8015
+    prefer-ip-address: true
+
+server:
+  port: 8015
+spring:
+  application:
+    name: service-hi
+
+
+info:
+ app:
+  name: amber-cloud-dept-8001
+ company:
+  name: www.amber.com
+ build:
+  artifactId: $project.artifactId$
+  version: $project.version$
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
