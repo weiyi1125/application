@@ -5,6 +5,8 @@ spring:
 ---
 spring:
   profiles: dev
+  application:
+    name: service-hi
 eureka:
   client:
     serviceUrl:
@@ -15,10 +17,6 @@ eureka:
 
 server:
   port: 8005
-spring:
-  application:
-    name: service-hi
-
 
 info:
  app:
@@ -39,6 +37,8 @@ management:
 
 spring:
   profiles: test
+  application:
+    name: service-hi
 eureka:
   client:
     serviceUrl:
@@ -49,9 +49,7 @@ eureka:
 
 server:
   port: 8015
-spring:
-  application:
-    name: service-hi
+
 
 
 info:
