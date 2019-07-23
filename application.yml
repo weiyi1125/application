@@ -4,8 +4,7 @@ spring:
     active: dev
 ---
 spring:
-  profiles:
-    active: dev
+  profiles: dev
 eureka:
   client:
     serviceUrl:
@@ -37,9 +36,9 @@ management:
         include: '*'
 
 ---
+
 spring:
-  profiles:
-    active: test
+  profiles: test
 eureka:
   client:
     serviceUrl:
